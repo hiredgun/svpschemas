@@ -1,0 +1,548 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "titleFront": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "descriptionFront": {
+      "type": "string"
+    },
+    "displays": {
+      "type": "integer"
+    },
+    "showDisplays": {
+      "type": "boolean"
+    },
+    "created": {
+      "type": "integer"
+    },
+    "updated": {
+      "type": "integer"
+    },
+    "published": {
+      "type": "integer"
+    },
+    "flightTimes": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "integer"
+        },
+        "end": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ]
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "assetType": {
+      "type": "string"
+    },
+    "streamType": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "playback": {
+      "type": "null"
+    },
+    "series": {
+      "type": "object",
+      "properties": {
+        "seasonNumber": {
+          "type": "integer"
+        },
+        "episodeNumber": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "seasonNumber",
+        "episodeNumber"
+      ]
+    },
+    "articleUrl": {
+      "type": "null"
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "parentId": {
+          "type": "integer"
+        },
+        "showCategory": {
+          "type": "boolean"
+        },
+        "isSeries": {
+          "type": "boolean"
+        },
+        "order": {
+          "type": "integer"
+        },
+        "stats": {
+          "type": "string"
+        },
+        "ageLimit": {
+          "type": "integer"
+        },
+        "lastAsset": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "additional": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "shortPath": {
+              "type": "null"
+            },
+            "images": {
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "icon"
+              ]
+            },
+            "image": {
+              "type": "string"
+            },
+            "isImageUploaded": {
+              "type": "boolean"
+            },
+            "logo": {
+              "type": "string"
+            },
+            "background": {
+              "type": "string"
+            },
+            "backgroundColor": {
+              "type": "string"
+            },
+            "showPlayerLogo": {
+              "type": "boolean"
+            },
+            "playerLogoImage": {
+              "type": "null"
+            },
+            "trackingCode": {
+              "type": "string"
+            },
+            "showEndPoster": {
+              "type": "boolean"
+            },
+            "showComments": {
+              "type": "boolean"
+            },
+            "allowAllDevices": {
+              "type": "boolean"
+            },
+            "adCampaignId": {
+              "type": "string"
+            },
+            "autoPlayNextAsset": {
+              "type": "boolean"
+            },
+            "autoPlayNextEmbed": {
+              "type": "boolean"
+            },
+            "notificationMailEnabled": {
+              "type": "boolean"
+            },
+            "metadata": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "required": [
+            "description",
+            "shortDescription",
+            "shortPath",
+            "images",
+            "image",
+            "isImageUploaded",
+            "logo",
+            "background",
+            "backgroundColor",
+            "showPlayerLogo",
+            "playerLogoImage",
+            "trackingCode",
+            "showEndPoster",
+            "showComments",
+            "allowAllDevices",
+            "adCampaignId",
+            "autoPlayNextAsset",
+            "autoPlayNextEmbed",
+            "notificationMailEnabled",
+            "metadata"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "parentId",
+        "showCategory",
+        "isSeries",
+        "order",
+        "stats",
+        "ageLimit",
+        "lastAsset",
+        "additional"
+      ]
+    },
+    "images": {
+      "type": "object",
+      "properties": {
+        "main": {
+          "type": "string"
+        },
+        "front": {
+          "type": "null"
+        },
+        "snapshots": {
+          "type": "string"
+        },
+        "featured": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "main",
+        "front",
+        "snapshots",
+        "featured"
+      ]
+    },
+    "streamUrls": {
+      "type": "object",
+      "properties": {
+        "hls": {
+          "type": "string"
+        },
+        "hds": {
+          "type": "string"
+        },
+        "mp4": {
+          "type": "null"
+        },
+        "pseudostreaming": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "hls",
+        "hds",
+        "mp4",
+        "pseudostreaming"
+      ]
+    },
+    "streamConfiguration": {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "additional": {
+      "type": "object",
+      "properties": {
+        "settings": {
+          "type": "object",
+          "properties": {
+            "showAds": {
+              "type": "boolean"
+            },
+            "showEmbed": {
+              "type": "boolean"
+            },
+            "showComments": {
+              "type": "boolean"
+            },
+            "ageLimit": {
+              "type": "integer"
+            },
+            "tonoRegistered": {
+              "type": "boolean"
+            },
+            "createdBy": {
+              "type": "string"
+            },
+            "lastEditedBy": {
+              "type": "string"
+            },
+            "source": {
+              "type": "integer"
+            },
+            "notes": {
+              "type": "null"
+            },
+            "showInNewest": {
+              "type": "boolean"
+            },
+            "loopGeneratorEnabled": {
+              "type": "boolean"
+            },
+            "escenicId": {
+              "type": "null"
+            },
+            "playhead": {
+              "type": "integer"
+            },
+            "startIndexPoint": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "showAds",
+            "showEmbed",
+            "showComments",
+            "ageLimit",
+            "tonoRegistered",
+            "createdBy",
+            "lastEditedBy",
+            "source",
+            "notes",
+            "showInNewest",
+            "loopGeneratorEnabled",
+            "escenicId",
+            "playhead",
+            "startIndexPoint"
+          ]
+        },
+        "chapters": {
+          "type": "array",
+          "items": {}
+        },
+        "featuredChapters": {
+          "type": "array",
+          "items": {}
+        },
+        "url": {
+          "type": "string"
+        },
+        "externalId": {
+          "type": "string"
+        },
+        "cuePoints": {
+          "type": "array",
+          "items": {}
+        },
+        "sourceFiles": {
+          "type": "array",
+          "items": {}
+        },
+        "externalCategoryId": {
+          "type": "string"
+        },
+        "nextAsset": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "subtitles": {
+          "type": "array",
+          "items": {}
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stories": {
+          "type": "array",
+          "items": {}
+        },
+        "access": {
+          "type": "object",
+          "properties": {
+            "plus": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "plus"
+          ]
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "newsValue": {
+              "type": "string"
+            },
+            "newsLifetime": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "newsValue",
+            "newsLifetime"
+          ]
+        }
+      },
+      "required": [
+        "settings",
+        "chapters",
+        "featuredChapters",
+        "url",
+        "externalId",
+        "cuePoints",
+        "sourceFiles",
+        "externalCategoryId",
+        "nextAsset",
+        "subtitles",
+        "tags",
+        "stories",
+        "access",
+        "metadata"
+      ]
+    },
+    "provider": {
+      "type": "string"
+    },
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "string"
+              },
+              "_links": {
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "type": "object",
+                    "properties": {
+                      "href": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "href"
+                    ]
+                  }
+                },
+                "required": [
+                  "self"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "tag",
+              "_links"
+            ]
+          }
+        }
+      },
+      "required": [
+        "tags"
+      ]
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "href"
+          ]
+        }
+      },
+      "required": [
+        "self"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "titleFront",
+    "description",
+    "descriptionFront",
+    "displays",
+    "showDisplays",
+    "created",
+    "updated",
+    "published",
+    "flightTimes",
+    "duration",
+    "assetType",
+    "streamType",
+    "status",
+    "playback",
+    "series",
+    "articleUrl",
+    "category",
+    "images",
+    "streamUrls",
+    "streamConfiguration",
+    "additional",
+    "provider",
+    "_embedded",
+    "_links"
+  ]
+}
